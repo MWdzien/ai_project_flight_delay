@@ -1,3 +1,14 @@
 __pycache__/
 .ipynb_checkpoints
 /data/
+/venv/
+venv/
+data/02_intermediate/
+docs/*.png
+docs/hist_*.png
+docs/box_*.png
+docs/pairplot_*.png
+docs/missing_matrix.png
+docs/correlation_heatmap.png
+
+!docs/architecture_diagram.png
