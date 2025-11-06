@@ -41,7 +41,7 @@ Plik źródłowy:
 ## 🧩 Architektura systemu
 Diagram przedstawia przepływ danych i integrację komponentów systemu:
 
-📄 [diagram (docs/architecture_diagram.png)](docs/architecture_diagram.png)
+📄 ![diagram (docs/architecture_diagram.png)](docs/architecture_diagram.png)
 
 ---
 
@@ -49,13 +49,13 @@ Diagram przedstawia przepływ danych i integrację komponentów systemu:
 
 ````
 
-ai_project_teamX/
+ai_project_flight_delay/
 │
 ├── docs/
 │   └── architecture_diagram.png
 │
 ├── src/
-│   └── ai_project_teamX/   ← kod Kedro
+│   └── ai_project_flight_delay/
 │
 ├── data/
 │   ├── raw/
@@ -75,7 +75,7 @@ ai_project_teamX/
 
 | Imię i nazwisko    | Rola w projekcie | GitHub login  |
 |--------------------|------------------|---------------|
-|Mateusz Wdzieńkowski| Właściciel       | @MWdzien      |
+|Mateusz Wdzieńkowski| Właściciel       | [@MWdzien](https://github.com/MWdzien)      |
 
 ---
 
