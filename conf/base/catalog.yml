@@ -3,3 +3,59 @@ raw_data:
   filepath: data/01_raw/dataset_flight_delay.csv
   load_args:
     low_memory: False
+
+clean_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/clean_data.csv
+  save_args:
+    index: False
+
+scaled_data:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/scaled_data.csv
+  save_args:
+    index: False
+
+train_data:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/train.csv
+  save_args:
+    index: False
+
+val_data:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/val.csv
+  save_args:
+    index: False
+
+test_data:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/test.csv
+  save_args:
+    index: False
+
+automl_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/automl_model.pkl
+
+automl_metrics:
+  type: json.JSONDataset
+  filepath: data/07_reporting/automl_metrics.json
+
+automl_results:
+  type: pandas.CSVDataset
+  filepath: data/07_reporting/automl_results.csv
+  save_args:
+    index: False
+
+baseline_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/baseline_model.pkl
+
+baseline_metrics:
+  type: json.JSONDataset
+  filepath: data/07_reporting/baseline_metrics.json
+
+model_comparison:
+  type: json.JSONDataset
+  filepath: data/07_reporting/model_comparison.json

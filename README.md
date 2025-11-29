@@ -7,7 +7,7 @@ Model ma przewidywać, czy dany lot ulegnie opóźnieniu, co pozwoli pasażerom 
 Projekt realizowany jest w ramach zajęć **„Architektura systemów AI”** i obejmuje budowę kompletnego systemu AI składającego się z następujących modułów:
 - **ETL / przetwarzanie danych** — implementacja pipeline’u w **Kedro** do czyszczenia, transformacji i przygotowania danych,
 - **Trening modelu** — wykorzystanie AutoML lub własnego modelu klasyfikacyjnego (np. XGBoost, Random Forest),
-- **API backend (.NET)** — usługa umożliwiająca wykonywanie predykcji przez HTTP endpointy,
+- **API backend (FastPI)** — usługa umożliwiająca wykonywanie predykcji przez HTTP endpointy,
 - **UI frontend (React)** — prosty interfejs użytkownika pozwalający wprowadzić dane lotu i uzyskać przewidywany status (opóźniony / na czas),
 - **Automatyzacja (Airflow)** — planowanie uruchamiania pipeline’u ETL i procesu retrainingu modelu,
 - **Wdrożenie (Docker / Cloud)** — konteneryzacja projektu i uruchomienie w środowisku chmurowym.
@@ -49,13 +49,13 @@ Diagram przedstawia przepływ danych i integrację komponentów systemu:
 
 ````
 
-ai_project_flight_delay/
+ai_project_flight_prediction/
 │
 ├── docs/
 │   └── architecture_diagram.png
 │
 ├── src/
-│   └── ai_project_flight_delay/
+│   └── ai_project_flight_prediction/
 │
 ├── data/
 │   ├── raw/
@@ -81,6 +81,6 @@ ai_project_flight_delay/
 
 ## 🧭 Linki projektu
 
-- 📦 Repozytorium GitHub: [link tutaj](https://github.com/MWdzien/ai_project_flight_delay)  
-- 🗂️ GitHub Project Board: [link tutaj](https://github.com/users/MWdzien/projects/1)  
+- 📦 Repozytorium GitHub: [link tutaj](https://github.com/PJATK-ASI-2024/ai_project_flight_delay)  
+- 🗂️ GitHub Project Board: [link tutaj](https://github.com/orgs/PJATK-ASI-2024/projects/214)  
 - 📜 Dokumentacja / diagram architektury: [link tutaj](dosc/architecture_diagram.png)  

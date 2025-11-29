@@ -1,5 +1,5 @@
 from kedro.pipeline import Pipeline, node
-from .nodes import load_raw_data, basic_statistics, missing_and_outliers, visualize, save_report
+from .nodes import load_raw_data, basic_statistics, missing_and_outliers, visualize
 
 def create_pipeline(**kwargs) -> Pipeline:
     return Pipeline(
@@ -8,6 +8,5 @@ def create_pipeline(**kwargs) -> Pipeline:
             node(func=basic_statistics, inputs="df_raw", outputs="stats"),
             node(func=missing_and_outliers, inputs="df_raw", outputs="missing_outliers"),
             node(func=visualize, inputs="df_raw", outputs="visuals"),
-            node(func=save_report, inputs=["stats","missing_outliers","visuals"], outputs="eda_report_path"),
         ]
     )

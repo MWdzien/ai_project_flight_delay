@@ -4,3 +4,4 @@ matplotlib
 seaborn
 kedro
 missingno
+pycaret
