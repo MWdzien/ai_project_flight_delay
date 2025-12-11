@@ -5,3 +5,8 @@ seaborn
 kedro
 missingno
 pycaret
+scikit-learn
+mlflow
+dvc
+shap
+kedro-datasets

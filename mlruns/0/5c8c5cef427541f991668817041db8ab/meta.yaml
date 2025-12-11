@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/5c8c5cef427541f991668817041db8ab/artifacts
+end_time: 1764439921021
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5c8c5cef427541f991668817041db8ab
+run_name: RandomForest_FlightDelay
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764439917849
+status: 4
+tags: []
+user_id: I760554

@@ -59,3 +59,42 @@ baseline_metrics:
 model_comparison:
   type: json.JSONDataset
   filepath: data/07_reporting/model_comparison.json
+
+best_model_metrics:
+  type: json.JSONDataset
+  filepath: data/08_reporting/best_model_metrics.json
+
+# Best model (RandomForest)
+best_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/best_model.pkl
+
+# Cross-validation results
+cv_results:
+  type: json.JSONDataset
+  filepath: data/08_reporting/cv_results.json
+
+# Test metrics
+test_metrics:
+  type: json.JSONDataset
+  filepath: data/08_reporting/test_metrics.json
+
+# Feature importances
+feature_importances:
+  type: json.JSONDataset
+  filepath: data/08_reporting/feature_importances.json
+
+# SHAP flag
+shap_done:
+  type: json.JSONDataset
+  filepath: data/08_reporting/shap_done.json
+
+# MLflow info
+mlflow_info:
+  type: json.JSONDataset
+  filepath: data/08_reporting/mlflow_info.json
+
+# Version info
+version_info:
+  type: json.JSONDataset
+  filepath: data/08_reporting/version_info.json

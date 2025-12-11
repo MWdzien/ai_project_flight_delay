@@ -3,6 +3,7 @@ import numpy as np
 from pathlib import Path
 
 from sklearn.dummy import DummyClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 )
@@ -82,9 +83,38 @@ def train_automl(train_data: pd.DataFrame, val_data: pd.DataFrame):
 
     return best_model_final, metrics, automl_results_df
 
+def train_best_model(train_data: pd.DataFrame, val_data: pd.DataFrame):
+    """
+    Trenuje najlepszy model RandomForest na podstawie wyników AutoML
+    """
+    X_train = train_data.drop(columns=["is_delayed"])
+    y_train = train_data["is_delayed"]
+
+    X_val = val_data.drop(columns=["is_delayed"])
+    y_val = val_data["is_delayed"]
+
+    # Na podstawie AutoML wiemy, że RandomForest jest najlepszy
+    model = RandomForestClassifier(
+        n_estimators=100,
+        max_depth=20,
+        min_samples_split=5,
+        min_samples_leaf=2,
+        random_state=RANDOM_SEED,
+        n_jobs=-1
+    )
+    
+    model.fit(X_train, y_train)
+
+    # Predykcje na zbiorze walidacyjnym
+    y_pred = model.predict(X_val)
+    y_proba = model.predict_proba(X_val)
+
+    metrics = _compute_classification_metrics(y_val, y_pred, y_proba)
+
+    return model, metrics
+
 def evaluate_models(baseline_metrics: dict, automl_metrics: dict):
     return {
         "baseline": baseline_metrics,
         "automl": automl_metrics
     }
-
